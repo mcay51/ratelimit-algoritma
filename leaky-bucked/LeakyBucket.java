@@ -47,15 +47,17 @@ public class LeakyBucket {
      */
     private void sizdir() {
         long simdi = System.currentTimeMillis();
+        System.out.println("simdi: " + TimestampConverter.convertTimestamp(simdi));
         long gecenSure = simdi - sonSizdirmaZamani;
-        
+        System.out.println("gecenSure: " + TimestampConverter.convertMillisToSeconds(gecenSure) + " saniye");
         // Gecen surede bosaltilmasi gereken istek sayisini hesapla
         int sizanIstekSayisi = (int) ((gecenSure / 1000.0) * sizdirmaHizi);
-        
+        System.out.println("sizanIstekSayisi: " + sizanIstekSayisi);
         if (sizanIstekSayisi > 0) {
             // Kovadan sizan suyu guncelle
             suMiktari = Math.max(0, suMiktari - sizanIstekSayisi);
             sonSizdirmaZamani = simdi;
+            System.out.println("sonSizdirmaZamani: " + TimestampConverter.convertTimestamp(sonSizdirmaZamani));
         }
     }
 

@@ -48,14 +48,19 @@ public class TokenBucket {
     private void jetonEkle() {
         long simdi = System.currentTimeMillis();
         long gecenSure = simdi - sonJetonEklemeZamani;
+
+        System.out.println("gecenSure: " + TimestampConverter.convertMillisToSeconds(gecenSure) + " saniye");
         
         // Gecen surede eklenmesi gereken jeton sayisini hesapla
         double eklenecekJetonSayisi = (gecenSure / 1000.0) * jetonEklemeHizi;
+        System.out.println("eklenecekJetonSayisi: " + eklenecekJetonSayisi);
         
         if (eklenecekJetonSayisi > 0) {
             // Kovaya jeton ekle, ama kapasiteyi asma
             mevcutJetonSayisi = Math.min(kapasite, mevcutJetonSayisi + eklenecekJetonSayisi);
+            System.out.println("mevcutJetonSayisi: " + mevcutJetonSayisi);
             sonJetonEklemeZamani = simdi;
+            System.out.println("sonJetonEklemeZamani: " + TimestampConverter.convertTimestamp(sonJetonEklemeZamani));
         }
     }
 
