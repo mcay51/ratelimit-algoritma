@@ -1,6 +1,6 @@
 # TokenBucket (Jeton Kovası) Algoritması
 
-Bu proje, rate limiting (hız sınırlama) için kullanılan TokenBucket algoritmasının Java ile uygulanmış bir örneğini içerir. Algoritma, Türkçe açıklamalarla detaylı bir şekilde anlatılmıştır.
+Bu proje, rate limiting (hız sınırlama) için kullanılan TokenBucket algoritmasının Java ile uygulanmış bir örneğini içerir. Algoritma, açıklamalarla detaylı bir şekilde anlatılmıştır.
 
 ## Algoritma Nedir?
 
