@@ -1,6 +1,6 @@
 # LeakyBucket (Sizdiran Kova) Algoritmasi
 
-Bu proje, rate limiting (hiz sinirlama) icin kullanilan LeakyBucket algoritmasinin Java ile uygulanmis bir ornegini icerir. Algoritma, Turkce aciklamalarla detayli bir sekilde anlatilmistir.
+Bu proje, rate limiting (hiz sinirlama) icin kullanilan LeakyBucket algoritmasinin Java ile uygulanmis bir ornegini icerir. Algoritma, aciklamalarla detayli bir sekilde anlatilmistir.
 
 ## Algoritma Nedir?
 
